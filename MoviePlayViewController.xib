@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoviePlayViewController">
+            <connections>
+                <outlet property="localMovieViewController" destination="kIc-lA-WgD" id="o42-c6-cmo"/>
+                <outlet property="streamingMovieViewController" destination="cgL-uS-pLU" id="fdt-PN-LgX"/>
+                <outlet property="view" destination="zsn-Zq-uNp" id="eKG-H2-KOD"/>
+                <outlet property="viewButton" destination="eFH-B3-aTk" id="xzj-3C-LCb"/>
+                <outlet property="viewContent" destination="okZ-g9-HQL" id="kS0-8f-plf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zsn-Zq-uNp">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="eFH-B3-aTk">
+                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="W98-58-KGV">
+                            <rect key="frame" x="160" y="0.0" width="160" height="45"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <state key="normal" title="本地">
+                                <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="local:" destination="-1" eventType="touchUpInside" id="Cdv-s5-m1Q"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LpN-dG-uG6">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="45"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                            <state key="normal" image="streaming.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="stream:" destination="-1" eventType="touchUpInside" id="q2a-wt-J6E"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="okZ-g9-HQL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="531"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="-567" y="327"/>
+        </view>
+        <viewController id="cgL-uS-pLU" customClass="MyStreamingMovieViewController">
+            <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="jhZ-sM-Xwt" userLabel="streaming movie view">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Enter a streaming movie URL:" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="none" minimumFontSize="10" id="zde-Vt-LCK">
+                        <rect key="frame" x="63" y="93" width="195" height="29"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GEF-UJ-QJP">
+                        <rect key="frame" x="106" y="194" width="108" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.66666668650000005" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                        <state key="normal" title="Play Movie">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="disabled" title="Play Movie">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <state key="selected" title="Play Movie">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <state key="highlighted" title="Play Movie">
+                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <connections>
+                            <action selector="playStreamingMovieButtonPressed:" destination="cgL-uS-pLU" eventType="touchUpInside" id="I2s-Jy-ZRF"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8" borderStyle="bezel" textAlignment="center" minimumFontSize="17" clearButtonMode="always" id="CeS-vb-CTT">
+                        <rect key="frame" x="21" y="133" width="279" height="35"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="done"/>
+                        <connections>
+                            <outlet property="delegate" destination="cgL-uS-pLU" id="TtS-gV-WYB"/>
+                        </connections>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            </view>
+            <connections>
+                <outlet property="backgroundView" destination="8Jz-YR-3Zc" id="XQO-eW-RUk"/>
+                <outlet property="movieBackgroundImageView" destination="Sai-O1-7Yv" id="6EH-01-to7"/>
+                <outlet property="movieURLTextField" destination="CeS-vb-CTT" id="6R9-fg-bSs"/>
+            </connections>
+        </viewController>
+        <viewController id="kIc-lA-WgD" customClass="MyLocalMovieViewController">
+            <view key="view" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0qx-Da-Jrp" userLabel="View">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" image="preview.jpg" id="Obv-2R-PtV" customClass="MyImageView">
+                        <rect key="frame" x="57" y="59" width="205" height="135"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QQa-7t-3Vj">
+                        <rect key="frame" x="106" y="201" width="108" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.66666668650000005" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="18"/>
+                        <state key="normal" title="Play Movie">
+                            <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <state key="disabled" title="Play Movie">
+                            <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <state key="selected" title="Play Movie">
+                            <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <state key="highlighted" title="Play Movie">
+                            <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        </state>
+                        <connections>
+                            <action selector="playMovieButtonPressed:" destination="kIc-lA-WgD" eventType="touchUpInside" id="7Mt-iP-RpF"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            </view>
+            <connections>
+                <outlet property="backgroundView" destination="EEV-T9-rsl" id="e8a-pz-HMX"/>
+            </connections>
+        </viewController>
+        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movieBackground.jpg" id="Sai-O1-7Yv">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="515"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <point key="canvasLocation" x="-244.5" y="103.5"/>
+        </imageView>
+        <view contentMode="scaleToFill" id="8Jz-YR-3Zc" userLabel="stream background view">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+        <view contentMode="scaleToFill" id="EEV-T9-rsl" userLabel="local background view">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="movieBackground.jpg" width="478" height="640"/>
+        <image name="preview.jpg" width="480" height="270"/>
+        <image name="streaming.png" width="32" height="32"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

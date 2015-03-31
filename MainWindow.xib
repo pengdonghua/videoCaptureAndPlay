@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment version="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIApplication">
+            <connections>
+                <outlet property="delegate" destination="bYg-Ix-Cfg" id="Asw-Pa-zHL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <customObject id="bYg-Ix-Cfg" userLabel="App Delegate" customClass="AppDelegate">
+            <connections>
+                <outlet property="navigationController" destination="pPl-Nv-Fvr" id="kZP-XC-lIf"/>
+                <outlet property="window" destination="4Hd-pY-k7B" id="IIm-pW-FP0"/>
+            </connections>
+        </customObject>
+        <window clearsContextBeforeDrawing="NO" contentMode="scaleToFill" visibleAtLaunch="YES" id="4Hd-pY-k7B">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="468.5" y="269.5"/>
+        </window>
+        <navigationController id="pPl-Nv-Fvr">
+            <navigationBar key="navigationBar" hidden="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ZEM-9K-DzD">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </navigationBar>
+            <viewControllers>
+                <viewController id="0Sy-EI-3f9" customClass="AVCamViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E8h-wg-w6r"/>
+                        <viewControllerLayoutGuide type="bottom" id="HvW-Ci-UbL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="khv-sd-Mdo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar clearsContextBeforeDrawing="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jiJ-bP-Tij">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dez-3S-TpF"/>
+                                    <barButtonItem title="Item" style="plain" id="LRc-sW-qYo">
+                                        <connections>
+                                            <action selector="record:" destination="0Sy-EI-3f9" id="QVT-ca-IDb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="mft-Wb-IJO"/>
+                                    <barButtonItem title="Item" id="SG6-ie-dSh">
+                                        <connections>
+                                            <action selector="changeCameral:" destination="0Sy-EI-3f9" id="ahW-I4-Vcy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Oic-8l-SBW"/>
+                                    <barButtonItem title="Item" id="iJT-kJ-DBi">
+                                        <connections>
+                                            <action selector="play:" destination="0Sy-EI-3f9" id="tCl-0A-9Yc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oVN-HC-CXm"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wQ6-TE-2VI" customClass="AVCamPreviewView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="视频录制" id="KkE-cN-yLv"/>
+                    <connections>
+                        <outlet property="cameralToggleButton" destination="SG6-ie-dSh" id="17V-23-GpA"/>
+                        <outlet property="playButton" destination="iJT-kJ-DBi" id="PEY-eW-kKV"/>
+                        <outlet property="previewView" destination="wQ6-TE-2VI" id="n8b-1O-Nys"/>
+                        <outlet property="recordButton" destination="LRc-sW-qYo" id="6Ex-6U-7A6"/>
+                    </connections>
+                </viewController>
+            </viewControllers>
+            <connections>
+                <outlet property="delegate" destination="0Sy-EI-3f9" id="75B-sO-lNg"/>
+            </connections>
+            <point key="canvasLocation" x="552" y="260"/>
+        </navigationController>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
